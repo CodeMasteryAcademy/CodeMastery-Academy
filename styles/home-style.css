@@ -1,0 +1,502 @@
+@import url("reset.css");
+
+header {
+  padding: 10px;
+  width: 100%;
+  height: 60px;
+  color: red;
+  background-color: transparent;
+
+  position: absolute;
+  top: 20px;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+body {
+  background-color: rgb(6, 15, 28);
+}
+
+section.hero {
+  padding: 0 !important;
+  height: 70vh;
+  margin: 0;
+  background: rgba(0, 0, 0, 0.2) url("../images/background01.jpg") no-repeat
+    center center;
+
+  background-size: cover;
+}
+
+main section {
+  padding: 20px;
+  margin-bottom: 100px;
+  min-height: 70vh;
+  width: 100%;
+
+  background-color: rgb(6, 15, 28);
+  overflow: hidden;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.show {
+  opacity: 1;
+  transition: all 1s;
+  animation: subir 1s ease forwards;
+}
+
+@keyframes subir {
+  from {
+    transform: translateY(100vh);
+  }
+  to {
+    transform: translateY(0vh);
+  }
+}
+
+main > section > h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+section#section-01 {
+  box-shadow: 0px -50px 80px 60px rgb(6, 15, 28);
+  background-color: rgb(6, 15, 28);
+}
+
+section#section-01 .formulario {
+  padding: 20px;
+
+  display: grid;
+  gap: 20px;
+  align-content: center;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 500px));
+}
+
+section#section-01 .formulario .texto-introdutorio h2 {
+  max-width: 500px;
+  margin: 20px auto;
+  text-align: center;
+  font-size: 36px;
+}
+
+section#section-01 .formulario .texto-introdutorio p {
+  align-self: center;
+  justify-self: center;
+  max-width: 500px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+section#section-01 .formulario .container-inputs {
+  padding: 20px;
+  height: auto;
+  width: 100%;
+  border-radius: 10px;
+  background-color: white;
+
+  display: grid;
+  gap: 20px;
+  grid-auto-columns: 1fr;
+  grid-template-rows: 1fr repeat(3, 60px);
+
+  overflow: hidden;
+}
+
+section#section-01 .formulario .container-inputs p {
+  align-self: center;
+  justify-self: center;
+  color: #868c91;
+  font-size: 1rem;
+  text-align: center;
+}
+
+section#section-01 .formulario .container-inputs .field-input {
+  justify-self: center;
+  width: 100%;
+}
+
+section#section-01 .formulario .container-inputs .field-input input {
+  padding: 0 15px;
+  height: 100%;
+  width: 100%;
+
+  justify-self: start;
+  color: #333;
+  font-size: 1rem;
+  font-weight: 400;
+
+  border: 1.5px solid rgba(0, 0, 0, 0.2);
+  border-bottom-width: 2.5px;
+  border-radius: 6px;
+  transition: all 300ms ease;
+}
+
+section#section-01
+  .formulario
+  .container-inputs
+  .field-input
+  input:is(:focus, :valid) {
+  border-color: rgb(1, 117, 241);
+}
+
+section#section-01 .formulario .container-inputs button {
+  width: 100%;
+  height: 100%;
+}
+
+section#section-02 {
+  padding: 0;
+  display: grid;
+  gap: 10px 60px;
+  align-content: center;
+  justify-content: center;
+  align-items: start;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 500px));
+}
+
+section#section-02 h2 {
+  margin-top: 40px;
+  font-family: 2.2rem;
+}
+
+section#section-02 .container-cards {
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  gap: 40px;
+  align-content: center;
+  justify-content: center;
+  align-items: start;
+  justify-items: start;
+  grid-auto-columns: 100%;
+  grid-auto-rows: auto;
+}
+
+section#section-02 .container-cards .card-text {
+  border-bottom: 1px solid #6c6c6c;
+  padding-bottom: 40px;
+}
+
+section#section-02 .container-cards .card-text:last-child {
+  border: none;
+}
+
+section#section-02 .container-cards .card-text i {
+  color: rgb(1, 117, 241);
+  font-size: 2rem;
+}
+
+section#section-02 .container-cards .card-text h3 {
+  margin: 10px 0;
+  font-size: 1.3rem;
+}
+
+section#section-02 .container-cards .card-text p {
+  margin: 10px 0;
+  font-weight: 400;
+}
+
+section#section-03 {
+  height: 120vh;
+  padding: 0;
+  margin: 0;
+  border-radius: 100px 100px 0 0;
+
+  position: relative;
+  overflow: hidden;
+}
+
+section#section-03 video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+section#section-03 .shadow {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(to bottom, transparent, black);
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+section#section-03 .shadow .text {
+  padding: 20px;
+}
+
+section#section-03 .shadow .text h2 {
+  text-align: center;
+  font-weight: 300;
+  margin: 20px auto;
+  max-width: 374px;
+}
+
+section#section-03 .shadow .text h2 strong {
+  color: white;
+}
+
+section#section-03 .shadow .text p {
+  text-align: center;
+  max-width: 836px;
+}
+
+section#section-04 {
+  margin-bottom: 0;
+  padding-bottom: 100px;
+  width: 100%;
+  min-height: 70vh;
+  background-color: black;
+  overflow: hidden;
+}
+
+section#section-04 .container-card {
+  display: grid;
+  gap: 20px;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 480px));
+  grid-auto-rows: minmax(auto);
+}
+
+section#section-04 .container-card .card-text {
+  padding: 30px;
+  width: 100%;
+  height: 100%;
+
+  border: 1px solid rgb(63, 63, 63, 0.5);
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.068);
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+section#section-04 .container-card .card-text:hover {
+  transform: translateY(-10px);
+  background-color: rgba(255, 255, 255, 0.212);
+}
+
+section#section-04 .container-card .card-text i,
+section#section-04 .container-card .card-text .icon {
+  color: rgb(1, 117, 241);
+  font-size: 1.8rem;
+  font-weight: bolder;
+}
+
+section#section-04 .container-card .card-text p {
+  font-size: 0.9rem;
+  margin: 10px 0;
+  color: #c2c2c2;
+}
+
+section#section-05 {
+  padding: 0;
+  background-image: linear-gradient(
+    to bottom,
+    black,
+    rgb(6, 15, 28),
+    rgb(6, 15, 28),
+    rgb(6, 15, 28)
+  );
+}
+
+section#section-05 .container-courses {
+  width: 100%;
+  padding: 10px;
+
+  display: grid;
+  gap: 20px;
+  align-content: center;
+  justify-content: center;
+
+  grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
+  grid-auto-rows: 500px;
+
+  overflow: hidden;
+}
+
+section#section-05 .container-courses .card-courses {
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  grid-auto-columns: 100%;
+  grid-template-rows: 150px 1fr;
+
+  border: 1px solid rgb(63, 63, 63, 0.5);
+  border-radius: 10px;
+  background-color: #171f2b;
+  transition: all 0.3s ease-in-out;
+
+  overflow: hidden;
+}
+
+section#section-05 .container-courses .card-courses .img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+section#section-05 .container-courses .card-courses .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+section#section-05 .container-courses .card-courses .text {
+  padding: 20px;
+  width: 100%;
+  height: 102%;
+
+  display: grid;
+  align-content: start;
+  justify-content: center;
+  grid-template-rows: auto auto 1fr;
+
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0px -4px 50px 20px rgba(0, 0, 0, 0.8);
+  background-color: #171f2b;
+
+  transform: translateY(-5px);
+  overflow: hidden;
+}
+
+section#section-05 .container-courses .card-courses .text h3 {
+  width: 100%;
+  font-size: 1.2rem;
+  text-align: left;
+  word-wrap: break-word;
+  color: rgb(1, 117, 241);
+}
+
+section#section-05 .container-courses .card-courses .text p {
+  font-size: 0.8rem;
+  margin: 10px 0;
+}
+
+section#section-05 .container-courses .card-courses .text a {
+  align-self: end;
+  justify-self: start;
+  font-size: 0.8rem;
+}
+
+section#section-05 .container-courses .card-courses .text a:hover {
+  color: rgba(255, 255, 255, 0.336);
+}
+
+section#section-06 {
+  margin: 0;
+  padding: 70px 20px;
+  background-color: #ffffff;
+
+  display: grid;
+  gap: 20px;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  justify-items: start;
+
+  grid-template-columns: repeat(auto-fit, minmax(100px, 480px));
+  grid-auto-columns: auto;
+}
+
+section#section-06 .img {
+  width: 100%;
+  height: 500px;
+  max-width: 500px;
+  max-height: 600px;
+
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+section#section-06 .img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+section#section-06 .description h2 {
+  margin-top: 15px;
+
+  color: #3f3f3f;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 34px;
+}
+
+section#section-06 .description h2 strong {
+  color: #3f3f3f;
+  word-wrap: break-word;
+  font-size: 30px;
+}
+
+section#section-06 .description p {
+  margin: 20px 0;
+  color: #3f3f3f;
+  font-size: 0.9rem;
+}
+
+section#section-06 .description p strong {
+  color: #3f3f3f;
+}
+
+footer {
+  padding: 10px;
+  height: 150px;
+  width: 100%;
+
+  border-top: 2px dashed rgb(63, 63, 63, 0.3);
+
+  display: grid;
+  gap: 10px;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+  justify-content: center;
+
+  @media (min-width: 770px) {
+    grid-template-columns: 300px 1fr 300px;
+  }
+
+  background-color: white;
+}
+
+footer > * {
+  color: #3f3f3f;
+}
+
+footer a,
+footer p,
+footer h3 {
+  text-align: center;
+}
+
+footer p,
+footer a {
+  font-size: 10px;
+}
+
+footer p {
+  justify-self: start;
+}
+
+footer h3 {
+  font-size: 1.3rem;
+}
