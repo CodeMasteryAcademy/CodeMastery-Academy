@@ -4,11 +4,7 @@ header {
   padding: 10px;
   width: 100%;
   height: 60px;
-  color: red;
-  background-color: transparent;
-
-  position: absolute;
-  top: 20px;
+  background-color: red;
 }
 
 header h1 {
