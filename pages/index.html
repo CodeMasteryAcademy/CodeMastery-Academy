@@ -327,8 +327,18 @@
     </footer>
 
     <script>
-      const inputName = document.getAnimations("inputName");
-      input;
+      const inputName = document.getElementById("inputName");
+      const inputEmail = document.getElementById("inputEmail");
+
+      const btnSubmit = document.getElementById("btnSubmit");
+
+      btnSubmit.addEventListener("click", function cleanInputs() {
+        if (!(inputEmail.value === "" && inputName.value === "")) {
+          document.querySelector(".container-inputs").submit();
+          inputEmail.value = "";
+          inputName.value = "";
+        }
+      });
     </script>
   </body>
 </html>
